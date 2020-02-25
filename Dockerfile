@@ -22,7 +22,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV mysql_pass ""
 ENV RADPASS radpass
 ENV CLIENT_NET "0.0.0.0/0"
-ENV CLIENT_SECRET 891011121314
+ENV CLIENT_SECRET 555666
 
 # PHP,Apache2,MySQL and FreeRADIUS install
 RUN apt-get update && \
