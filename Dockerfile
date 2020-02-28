@@ -78,7 +78,8 @@ RUN chmod +x /var/www/html/init-freeradius.sh
 RUN rm -rf /var/www/html/index.html
 
 # Create daloRADIUS Log file
-RUN touch /var/log/daloradius.log && chown -R www-data:www-data /var/log/daloradius.log
+# 注释了下一面一行，因为把日志放到html根目录
+# RUN touch /var/log/daloradius.log && chown -R www-data:www-data /var/log/daloradius.log
 
 # Expose FreeRADIUS Ports, MySQL, and Web for daloRADIUS
 EXPOSE 1812 1813 80 443
