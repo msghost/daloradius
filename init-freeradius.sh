@@ -56,7 +56,7 @@ sleep 3
 # Start Apache2 in the foreground and in debug mode
 /usr/sbin/apachectl -DFOREGROUND -k start -e debug &
 
-/usr/sbin/freeradius -X" > /var/www/html/init-freeradius.sh
+/usr/sbin/freeradius" > /var/www/html/init-freeradius.sh
 
 # Start the MySQL service
 chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
@@ -65,6 +65,6 @@ sleep 3
 
 # Start Apache2 in the foreground and in debug mode
 /usr/sbin/apachectl -DFOREGROUND -k start  &
-/usr/sbin/freeradius -X
+/usr/sbin/freeradius
 # Or with the local httpd.conf use
 #&>/dev/null /usr/sbin/apachectl -DFOREGROUND -k start -e debug -d . -f httpd.conf
