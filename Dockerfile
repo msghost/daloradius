@@ -77,6 +77,11 @@ RUN chmod +x /var/www/html/init-freeradius.sh
 # Remove the original sample index.html file
 RUN rm -rf /var/www/html/index.html
 
+#把系统日志权限开放
+RUN chmod a+rx /var/log/dmesg
+RUN chmod a+rx /var/log/freeradius
+RUN chmod a+rx /var/log/freeradius/*
+
 # Create daloRADIUS Log file
 # 注释了下一面一行，因为把日志放到html根目录
 # RUN touch /var/log/daloradius.log && chown -R www-data:www-data /var/log/daloradius.log
