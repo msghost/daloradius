@@ -9,7 +9,7 @@ mysql -u root --password=$MYSQLTMPROOT -e \
 flush privileges;"
 mysql -uradius --password=$RADPASS radius < /etc/freeradius/sql/mysql/schema.sql
 mysql -uradius --password=$RADPASS radius < /etc/freeradius/sql/mysql/nas.sql
-mysql -uradius --password=$RADPASS radius < /var/www/html/contrib/db/mysql-daloradius.sql
+mysql -uradius --password=$RADPASS radius < /var/www/html/contrib/db/fr2-mysql-daloradius-and-freeradius.sql
 
 sed -i 's/password = "radpass"/password = "'$RADPASS'"/' /etc/freeradius/sql.conf
 sed -i 's/#port = 3306/port = 3306/' /etc/freeradius/sql.conf
